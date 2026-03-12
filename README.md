@@ -1,4 +1,4 @@
-ф# API Automation Demo Framework
+# API Automation Demo Framework
 
 Demo API test automation framework built with Java, REST Assured, TestNG, Maven, and Allure Reports.
 
