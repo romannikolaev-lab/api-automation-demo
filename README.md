@@ -1,6 +1,6 @@
 # API Automation Demo Framework
 
-![Build](https://github.com/romannikolaev-lab/api-automation-demo/.github/workflows/tests.yml/badge.svg)
+![Build](https://github.com/romannikolaev-lab/api-automation-demo/actions/workflows/tests.yml/badge.svg)
 
 Demo API test automation framework built with Java, REST Assured, TestNG, Maven, and Allure Reports.
 
