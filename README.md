@@ -18,6 +18,19 @@ This project demonstrates a clean and scalable API automation architecture with:
 - Jackson
 - Allure Reports
 
+## Architecture
+
+The framework follows a layered architecture:
+
+Tests → API Client → Request Specification → REST Assured
+
+Key design principles:
+
+• separation of test logic and API interaction  
+• reusable request configuration  
+• DTO based request/response models  
+• centralized configuration
+
 ## Project Structure
 
 ```text
@@ -40,6 +53,7 @@ src
      │   └── utils
      │       └── ConfigReader.java
      └── resources
+         ├── allure.properties
          └── config.properties
 ```
 
@@ -59,10 +73,22 @@ Generate Allure report:
 
 allure serve target/allure-results
 
-## Notes
+## Reporting
 
-Base URL is configured in config.properties
+Allure Reports are integrated to provide detailed test execution results including:
 
-Request configuration is centralized in ApiClient
+• request / response logs  
+• test steps  
+• failure diagnostics
 
-Request and response payloads are represented by DTO classes
+## Example Reports
+
+![Allure Overview](docs/allure-report-overview.png)
+
+![Allure Behaviors](docs/allure-report-behaviors.png)
+
+## Design Decisions
+
+The framework uses DTO models for request and response bodies to ensure type safety and clean test code.
+
+API interaction is encapsulated inside API client classes to separate test logic from HTTP implementation.
